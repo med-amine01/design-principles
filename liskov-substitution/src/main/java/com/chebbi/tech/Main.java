@@ -2,16 +2,18 @@ package com.chebbi.tech;
 
 /**
  * Hello world!
- *
  */
-public class Main
-{
+public class Main {
     public static void main(String[] args) {
 
-        Shape rectangle = new Rectangle(10, 20);
-        System.out.println(rectangle.computeArea());
+        Shape rectangle = new Rectangle(5, 4);
+        Shape square = new Square(3);
 
-        Shape square = new Square(10);
-        System.out.println(square.computeArea());
+        System.out.println("Area of rectangle: " + calculateArea(rectangle));
+        System.out.println("Area of square: " + calculateArea(square));
+    }
+
+    public static double calculateArea(Shape shape) {
+        return shape.computeArea();
     }
 }
