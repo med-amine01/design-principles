@@ -1,24 +1,22 @@
 package com.chebbi.tech;
 
-public class Square extends Rectangle {
-	
-	public Square(int side) {
-		super(side, side);
-	}
-	
-	@Override
-	public void setWidth(int width) {
-		setSide(width);
-	}
+public class Square implements Shape {
+    private int side;
 
-	@Override
-	public void setHeight(int height) {
-		setSide(height);
-	}
+    public Square(int side) {
+        this.side = side;
+    }
 
-	public void setSide(int side) {
-		super.setWidth(side);
-		super.setHeight(side);
-	}
+    public int getSide() {
+        return side;
+    }
 
+    public void setSide(int side) {
+        this.side = side;
+    }
+
+    @Override
+    public int computeArea() {
+        return side * side;
+    }
 }
