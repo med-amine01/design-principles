@@ -2,28 +2,18 @@ package com.chebbi.tech;
 
 /**
  * Hello world!
- *
  */
-public class Main
-{
+public class Main {
     public static void main(String[] args) {
 
-        Rectangle rectangle = new Rectangle(10, 20);
-        System.out.println(rectangle.computeArea());
+        Shape rectangle = new Rectangle(5, 4);
+        Shape square = new Square(3);
 
-        Square square = new Square(10);
-        System.out.println(square.computeArea());
-
-        useRectangle(rectangle);
-
-        useRectangle(square);
-
+        System.out.println("Area of rectangle: " + calculateArea(rectangle));
+        System.out.println("Area of square: " + calculateArea(square));
     }
 
-    private static void useRectangle(Rectangle rectangle) {
-        rectangle.setHeight(20);
-        rectangle.setWidth(30);
-        assert rectangle.getHeight() == 20 : "Height Not equal to 20";
-        assert rectangle.getWidth() == 30 : "Width Not equal to 30";
+    public static double calculateArea(Shape shape) {
+        return shape.computeArea();
     }
 }
