@@ -11,7 +11,4 @@ public interface PersistenceService<T extends Entity> {
 	public void delete(T entity);
 	
 	public T findById(Long id);
-
-	// This is bad for interface
-	public List<T> findByName(String name);
 }
