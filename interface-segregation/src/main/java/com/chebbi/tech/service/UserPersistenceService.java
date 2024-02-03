@@ -32,8 +32,8 @@ public class UserPersistenceService implements PersistenceService<User>{
 			return USERS.get(id);
 		}
 	}
-	
-	@Override
+
+	// don't put in this interface because it's specific to user
 	public List<User> findByName(String name) {
 		synchronized (USERS) {
 			return USERS.values().stream().filter(u->u.getName().equalsIgnoreCase(name)).collect(Collectors.toList());
