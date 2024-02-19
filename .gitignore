@@ -1,6 +1,3 @@
 # Project exclude paths
-/dependency-inversion/target/
-/interface-segregation/target/
-/liskov-substitution/target/
-/open-close/target/
-/single-responsibility/target/
+**/target/**
+.idea
